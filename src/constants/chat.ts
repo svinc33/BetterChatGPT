@@ -39,6 +39,7 @@ export const modelOptions: ModelOptions[] = [
 export const defaultModel = 'o1-preview';
 
 export const modelMaxToken = {
+  'o1-preview': 4096,
   'gpt-3.5-turbo': 4096,
   'gpt-3.5-turbo-0301': 4096,
   'gpt-3.5-turbo-0613': 4096,
@@ -133,6 +134,10 @@ export const modelCost = {
     prompt: { price: 0.005, unit: 1000 },
     completion: { price: 0.015, unit: 1000 },
   },
+  'o1-preview' {
+    prompt: { price: 0.005, unit: 1000 },
+    completion: { price: 0.015, unit: 1000 },
+  },
   'gpt-4o-2024-05-13': {
     prompt: { price: 0.005, unit: 1000 },
     completion: { price: 0.015, unit: 1000 },
@@ -143,7 +148,6 @@ export const defaultUserMaxToken = 4000;
 
 export const _defaultChatConfig: ConfigInterface = {
   model: defaultModel,
-  max_tokens: defaultUserMaxToken,
   temperature: 1,
   presence_penalty: 0,
   top_p: 1,
